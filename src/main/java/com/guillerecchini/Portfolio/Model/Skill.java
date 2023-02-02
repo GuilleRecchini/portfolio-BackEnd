@@ -1,5 +1,6 @@
 package com.guillerecchini.Portfolio.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -25,9 +26,10 @@ public class Skill {
     private String image;
     private Integer percentage;
     private Boolean isHard;
-    
+
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_user")
+    @JsonBackReference
     private User user;
 
     public Skill() {

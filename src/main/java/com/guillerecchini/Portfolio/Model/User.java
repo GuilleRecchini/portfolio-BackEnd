@@ -28,20 +28,24 @@ public class User {
     private String about;
     private String image;
 
-    @OneToMany(mappedBy="user", fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Set<SocialNetwork> listSocialNetworks = new HashSet<>();
     
-    @OneToMany(mappedBy="user", fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Set<Project> listProjects = new HashSet<>();
     
-    @OneToMany(mappedBy="user", fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Set<Skill> listSkills = new HashSet<>();
 
-    @OneToMany(mappedBy="user", fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonManagedReference
     private Set<WorkExperience> listWorkExperience = new HashSet<>();
 
-    @OneToMany(mappedBy="user", fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Set<Education> listEducation = new HashSet<>();
 
     public User() {

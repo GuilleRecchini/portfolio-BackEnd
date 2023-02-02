@@ -1,5 +1,6 @@
 package com.guillerecchini.Portfolio.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -28,8 +29,10 @@ public class Education {
     private Date endDate;
     private String institution;
     private String image;
-    @ManyToOne(fetch=FetchType.EAGER)
-    @JoinColumn(name = "id_user")
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="id_user")
+    @JsonBackReference
     private User user;
 
     public Education() {

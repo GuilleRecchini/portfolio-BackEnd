@@ -1,5 +1,6 @@
 package com.guillerecchini.Portfolio.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -22,20 +23,21 @@ public class SocialNetwork {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;    
     private String name;
-    private String iamge;
+    private String image;
     private String url;
     
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_user")
+    @JsonBackReference
     private User user;
 
     public SocialNetwork() {
     }
 
-    public SocialNetwork(Long id, String name, String iamge, String url, User user) {
+    public SocialNetwork(Long id, String name, String image, String url, User user) {
         this.id = id;
         this.name = name;
-        this.iamge = iamge;
+        this.image = image;
         this.url = url;
         this.user = user;
     }
