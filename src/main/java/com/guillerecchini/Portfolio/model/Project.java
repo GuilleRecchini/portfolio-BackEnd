@@ -1,4 +1,4 @@
-package com.guillerecchini.Portfolio.Model;
+package com.guillerecchini.Portfolio.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;

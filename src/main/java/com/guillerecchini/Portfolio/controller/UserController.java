@@ -1,7 +1,7 @@
-package com.guillerecchini.Portfolio.Controller;
+package com.guillerecchini.Portfolio.controller;
 
-import com.guillerecchini.Portfolio.Model.User;
-import com.guillerecchini.Portfolio.Service.UserService;
+import com.guillerecchini.Portfolio.model.User;
+import com.guillerecchini.Portfolio.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

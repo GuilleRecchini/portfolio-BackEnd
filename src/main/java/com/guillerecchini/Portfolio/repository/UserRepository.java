@@ -1,6 +1,6 @@
-package com.guillerecchini.Portfolio.Repository;
+package com.guillerecchini.Portfolio.repository;
 
-import com.guillerecchini.Portfolio.Model.User;
+import com.guillerecchini.Portfolio.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

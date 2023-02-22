@@ -1,4 +1,4 @@
-package com.guillerecchini.Portfolio.Model;
+package com.guillerecchini.Portfolio.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
@@ -10,42 +10,35 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
 @Entity
-@Table(name="Education")
-public class Education {
+@Table(name="SocialNetworks")
+public class SocialNetwork {
     
     @Id
-    @Column(name="id_education")
+    @Column(name="Id_Red")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;    
-    private String degree;
-    private String description;
-    private Date startDate;
-    private Date endDate;
-    private String institution;
+    private String name;
     private String image;
-
+    private String url;
+    
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_user")
     @JsonBackReference
     private User user;
 
-    public Education() {
+    public SocialNetwork() {
     }
 
-    public Education(Long id, String degree, String description, Date startDate, Date endDate, String institution, String image, User user) {
+    public SocialNetwork(Long id, String name, String image, String url, User user) {
         this.id = id;
-        this.degree = degree;
-        this.description = description;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.institution = institution;
+        this.name = name;
         this.image = image;
+        this.url = url;
         this.user = user;
     }
 }

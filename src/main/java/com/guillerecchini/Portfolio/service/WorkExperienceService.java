@@ -1,7 +1,7 @@
-package com.guillerecchini.Portfolio.Service;
+package com.guillerecchini.Portfolio.service;
 
-import com.guillerecchini.Portfolio.Model.WorkExperience;
-import com.guillerecchini.Portfolio.Repository.WorkExperienceRepository;
+import com.guillerecchini.Portfolio.model.WorkExperience;
+import com.guillerecchini.Portfolio.repository.WorkExperienceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

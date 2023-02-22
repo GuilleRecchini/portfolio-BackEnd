@@ -1,7 +1,7 @@
-package com.guillerecchini.Portfolio.Controller;
+package com.guillerecchini.Portfolio.controller;
 
-import com.guillerecchini.Portfolio.Model.Education;
-import com.guillerecchini.Portfolio.Service.EducationService;
+import com.guillerecchini.Portfolio.model.Education;
+import com.guillerecchini.Portfolio.service.EducationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

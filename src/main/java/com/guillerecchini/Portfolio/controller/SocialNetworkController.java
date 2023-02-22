@@ -1,7 +1,7 @@
-package com.guillerecchini.Portfolio.Controller;
+package com.guillerecchini.Portfolio.controller;
 
-import com.guillerecchini.Portfolio.Model.SocialNetwork;
-import com.guillerecchini.Portfolio.Service.SocialNetworkService;
+import com.guillerecchini.Portfolio.model.SocialNetwork;
+import com.guillerecchini.Portfolio.service.SocialNetworkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

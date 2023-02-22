@@ -1,4 +1,4 @@
-package com.guillerecchini.Portfolio.Model;
+package com.guillerecchini.Portfolio.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
@@ -15,30 +15,32 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-@Table(name="SocialNetworks")
-public class SocialNetwork {
+@Table(name="Skills")
+public class Skill {
     
     @Id
-    @Column(name="Id_Red")
+    @Column(name="id_skill")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;    
     private String name;
     private String image;
-    private String url;
-    
+    private Integer percentage;
+    private Boolean isHard;
+
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_user")
     @JsonBackReference
     private User user;
 
-    public SocialNetwork() {
+    public Skill() {
     }
 
-    public SocialNetwork(Long id, String name, String image, String url, User user) {
+    public Skill(Long id, String name, String image, Integer percentage, Boolean isHard, User user) {
         this.id = id;
         this.name = name;
         this.image = image;
-        this.url = url;
+        this.percentage = percentage;
+        this.isHard = isHard;
         this.user = user;
     }
 }

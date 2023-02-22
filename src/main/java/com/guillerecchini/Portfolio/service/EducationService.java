@@ -1,7 +1,7 @@
-package com.guillerecchini.Portfolio.Service;
+package com.guillerecchini.Portfolio.service;
 
-import com.guillerecchini.Portfolio.Model.Education;
-import com.guillerecchini.Portfolio.Repository.EducationRepository;
+import com.guillerecchini.Portfolio.model.Education;
+import com.guillerecchini.Portfolio.repository.EducationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
